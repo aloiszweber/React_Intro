@@ -4,7 +4,10 @@ import {useState} from "react";
 import Li from './li';
 
 function TodoList() {
-	const initialTodos = ["My first todo", "My second todo"];
+	const initialTodos = 	[
+							{name : "My first todo", done: false}, 
+							{name: "My second todo", done: false}
+							];
     const [todos, setTodos] = useState(initialTodos);
     console.log(todos);
 	/*const myState = useState(initialTodos);
@@ -13,7 +16,7 @@ function TodoList() {
 	return (
 		<ul>
 			{todos.map((todo) => (
-				<Li todoName={todo}/> 
+				<Li todo={todo}/> 
 			))}
 		</ul>
 	);

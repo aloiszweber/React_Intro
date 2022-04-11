@@ -1,8 +1,12 @@
 
-function Li({todoName}) {
+function Li({todo}) {
+
+    function check() {
+        todo.done = true;
+    }
 
     return <li>
-        <input type="checkbox" /> <label> {todoName} </label>
+        <input onChange={check} type="checkbox" /> <label> {todo.name} </label>
     </li>
     }
 
